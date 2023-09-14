@@ -1,0 +1,7 @@
+node_modules
+*.lock
+dist
+TODO
+.work
+fetched-timeago*
+.DS_Store

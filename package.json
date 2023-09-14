@@ -1,0 +1,63 @@
+{
+    "name": "@fetched/timeago",
+    "version": "1.6.0",
+    "author": {
+        "name": "Far Fetched",
+        "url": "https://github.com/FFGlobal"
+    },
+    "description": "🪄 Tiniest Timeago Toolbox. Supports {ago|in}. Batteries Included.",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/FFGlobal/timeago.git"
+    },
+    "keywords": [
+        "timeago",
+        "time ago",
+        "relative time",
+        "time",
+        "timeago.js",
+        "react",
+        "svelte",
+        "javascript timeago",
+        "difference",
+        "i18n",
+        "internationalization",
+        "intl",
+        "node",
+        "browser"
+    ],
+    "files": ["dist"],
+    "type": "module",
+    "source": "src/index.ts",
+    "exports": {
+        "require": "./dist/index.js",
+        "import": "./dist/index.module.js",
+        "default": "./dist/index.modern.js"
+    },
+    "main": "./dist/index.js",
+    "module": "./dist/index.module.js",
+    "umd:main": "./dist/index.umd.js",
+    "scripts": {
+        "build": "npm run clean && microbundle",
+        "dev": "microbundle watch",
+        "lint": "npx biome ci .",
+        "format": "npx biome format . --write",
+        "clean": "rimraf dist",
+        "test": "jest ./tests"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^1.0.0",
+        "@types/jest": "^29.4.0",
+        "jest": "^29.4.2",
+        "jest-date-mock": "^1.0.8",
+        "microbundle": "^0.15.1",
+        "queue-microtask": "^1.2.3",
+        "rimraf": "^3.0.2",
+        "ts-jest": "^29.0.5",
+        "typescript": "^4.9.5"
+    },
+    "dependencies": {
+        "chrono-node": "^2.6.6"
+    }
+}
